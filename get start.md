@@ -5,7 +5,8 @@
 1. Services > EC2 > Launch instance > Amazon Linux 2 AMI (HVM), SSD Volume Type > Select > Review and Launch > Launch
 1. Select New Key pair > Download Key pair and save it in local machine
 1. Open putty gen > load above file > save private key 
-1. Copy IPv4 Public IP > open putty > enter ip > provide username as **ec2-user**
+1. Copy IPv4 Public IP > open putty > enter ip > expand **SSH** > select **AUTH** > browse and select **ppk file** > click on **open **
+1. provide username as **ec2-user**
 
     ![](login_screen.PNG)
 1. 
