@@ -9,6 +9,6 @@
 1. provide username as **ec2-user**
 
     ![](login_screen.PNG)
-1. 
+1. [refer blog](https://linuxacademy.com/guide/17385-use-putty-to-access-ec2-linux-instances-via-ssh-from-windows/)
 
 
