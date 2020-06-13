@@ -18,3 +18,7 @@ Install Ansible
 ================
 
 1. In master server ``amazon-linux-extras install ansible2``
+
+2. ``ls /etc/ansible`` observe all files
+
+3. 
