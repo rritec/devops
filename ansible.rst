@@ -5,13 +5,26 @@ SSH Passwordless Login
 
 2. Name master,dev and prod respectively
 
+**Master Server**
+
 3. In master server ``sudo -i`` > ``ssh-keygen`` > press enters
 
-4. Observe two files created ``id_rsa`` and ``id_rsa.pub``
+4. Navigate to ls ~/.ssh/
 
-5. copy the key from ``id_rsa.pub`` and paste into other server ``.ssh/authorized_keys``
+5. Observe two files created ``id_rsa`` and ``id_rsa.pub``
 
-6. In master server ``ssh <user>@<ip>`` and observe it will login without asking password
+6. cat ~/.ssh/id_rsa.pub 
+
+7. Copy the key from ``id_rsa.pub`` 
+
+**Client Servers**
+
+1. paste into other server ``vi ~/.ssh/authorized_keys``
+
+2. vi /etc/ssh/sshd_config and make ``passwordauthentication no`` to ``passwordauthentication
+yes``
+
+3. In master server ``ssh <ip>``> ``yes`` and observe it will login without asking password
 
 ================
 Install Ansible
@@ -21,4 +34,16 @@ Install Ansible
 
 2. ``ls /etc/ansible`` observe all files
 
-3. 
+3.  vi /etc/ansible/hosts
+
+4. Add a group and add private ips of client servers
+
+  ``[dev]
+
+  172.31.32.154
+
+  172.31.33.85``
+
+5.  ``ansible -m ping all``
+
+
