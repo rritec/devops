@@ -21,10 +21,12 @@ SSH Passwordless Login
 
 1. paste into other server ``vi ~/.ssh/authorized_keys``
 
-2. vi /etc/ssh/sshd_config and make ``passwordauthentication no`` to ``passwordauthentication
+2. vi /etc/ssh/sshd_config 
+
+3. make ``passwordauthentication no`` to ``passwordauthentication
 yes``
 
-3. In master server ``ssh <ip>``> ``yes`` and observe it will login without asking password
+4. In master server ``ssh <ip>``> ``yes`` and observe it will login without asking password
 
 ================
 Install Ansible
@@ -38,11 +40,11 @@ Install Ansible
 
 4. Add a group and add private ips of client servers
 
-  ``[dev]
+    [dev]
 
-  172.31.32.154
+    172.31.32.154
 
-  172.31.33.85``
+    172.31.33.85
 
 5.  ``ansible -m ping all``
 
